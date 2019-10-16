@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/playAgainLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/boardLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewGamestate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game state"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/buttonPlayagain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="resetGame"
+            android:text="Play Again"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/boardLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="360dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/board"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.496">
+
+        <TableRow
+            android:id="@+id/tableRow0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/token00"
+                android:layout_width="93dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:onClick="DropIn"
+                android:tag="0" />
+
+            <ImageView
+                android:id="@+id/token01"
+                android:layout_width="93dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:onClick="DropIn"
+                android:tag="1" />
+
+            <ImageView
+                android:id="@+id/token02"
+                android:layout_width="93dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:onClick="DropIn"
+                android:tag="2" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/token10"
+                android:layout_width="93dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:onClick="DropIn"
+                android:tag="3" />
+
+            <ImageView
+                android:id="@+id/token11"
+                android:layout_width="93dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:onClick="DropIn"
+                android:tag="4" />
+
+            <ImageView
+                android:id="@+id/token12"
+                android:layout_width="93dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:onClick="DropIn"
+                android:tag="5" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/token20"
+                android:layout_width="93dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:onClick="DropIn"
+                android:tag="6" />
+
+            <ImageView
+                android:id="@+id/token21"
+                android:layout_width="93dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:onClick="DropIn"
+                android:tag="7" />
+
+            <ImageView
+                android:id="@+id/token22"
+                android:layout_width="93dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:onClick="DropIn"
+                android:tag="8" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="114dp"
+        android:layout_height="119dp"
+        android:onClick="move"
+        app:srcCompat="@drawable/red" />
+
+</android.support.constraint.ConstraintLayout>
